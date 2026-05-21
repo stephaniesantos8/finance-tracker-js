@@ -1,6 +1,6 @@
 # Finance Tracker
 
-A finance tracker app built with HTML, CSS and JavaScript.
+Responsive finance tracker application built with HTML, CSS, JAVASCRIPT, and dynamic DOM manipulation.
 
 ## Features
 
@@ -27,3 +27,11 @@ A finance tracker app built with HTML, CSS and JavaScript.
 - classList.add()
 - Dynamic rendering
 - Updating UI with JavaScript
+
+- 
+## Live Demo
+
+https://stephaniesantos8.github.io/finance-tracker-js/
+## Screenshot
+
+![Finance Tracker Screenshot](screenshot.png)
