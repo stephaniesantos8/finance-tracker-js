@@ -52,31 +52,34 @@ function updateSummary() {
 }
 
 function addTransactionToList(transaction, index) {
-    const li = document.createElement("li");
+  const li = document.createElement("li");
 
-    li.innerHTML = `
-        ${transaction.description}: $${transaction.amount.toFixed(2)} (${transaction.type})
+  li.classList.add(transaction.type);
 
-        <button class="delete-btn">
-            X
-        </button>
-    `;
+  li.innerHTML = `
+    <div class="transaction-info">
+      <strong>${transaction.description}: $${transaction.amount.toFixed(2)}</strong>
+      <small>${transaction.type}</small>
+    </div>
 
-    if (transaction.type === "income") {
-        li.classList.add("income");
-    } else {
-        li.classList.add("expense");
-    }
+    <button class="delete-btn">×</button>
+  `;
 
-    const deleteButton = li.querySelector(".delete-btn");
+  const deleteButton = li.querySelector(".delete-btn");
 
-    deleteButton.addEventListener("click", function () {
-        transactions.splice(index, 1);
+  deleteButton.addEventListener("click", function () {
+    transactions.splice(index, 1);
 
-        li.remove();
+    updateSummary();
+    renderTransactions();
+  });
 
-        updateSummary();
-    });
+  transactionsList.appendChild(li);
+}
+function renderTransactions() {
+  transactionsList.innerHTML = "";
 
-    transactionsList.appendChild(li);
+  transactions.forEach(function (transaction, index) {
+    addTransactionToList(transaction, index);
+  });
 }
