@@ -32,6 +32,11 @@ Responsive finance tracker application built with HTML, CSS, JAVASCRIPT, and dyn
 ## Live Demo
 
 https://stephaniesantos8.github.io/finance-tracker-js/
+
 ## Screenshot
 
 ![Finance Tracker Screenshot](screenshot.png)
+
+
+
+
