@@ -17,6 +17,7 @@ renderTransactions();
 updateSummary();
 
 // SAVE TO LOCAL STORAGE
+
 function saveTransactions() {
   localStorage.setItem("transactions", JSON.stringify(transactions));
 }
